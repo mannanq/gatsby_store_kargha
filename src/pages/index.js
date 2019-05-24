@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
-      title="regular joe's"
+      title="Kargha, The Loom"
       styleClass="default-background"
     />
     <Info />
@@ -26,14 +26,14 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "default-background.jpeg" }) {
+    img: file(relativePath: { eq: "cover.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    menu: allContentfulCoffeeItem {
+    menu: allContentfulPastItems {
       edges {
         node {
           title

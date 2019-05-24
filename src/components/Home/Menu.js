@@ -18,7 +18,7 @@ export default class Menu extends Component {
     super(props)
     this.state = {
       items: props.items.edges,
-      coffeeItems: props.items.edges,
+      pastItems: props.items.edges,
       categories: getCategories(props.items.edges),
     }
   }
@@ -29,15 +29,15 @@ export default class Menu extends Component {
     // if all is selected, the all items are displayed
     if (category === "all") {
       this.setState(() => {
-        //   pass into the coffeeItems (in the state) all the items
-        return { coffeeItems: allItems }
+        //   pass into the pastItems (in the state) all the items
+        return { pastItems: allItems }
       })
     } else {
       // if a particular category is selected, check if the selected category is equal to the category of items in the product array
       let items = allItems.filter(({ node }) => node.category === category)
       this.setState(() => {
-        //   then in the coffeeItems, only pass the items which match that category
-        return { coffeeItems: items }
+        //   then in the pastItems, only pass the items which match that category
+        return { pastItems: items }
       })
     }
   }
@@ -67,7 +67,7 @@ export default class Menu extends Component {
             </div>
             {/* items */}
             <div className="row">
-              {this.state.coffeeItems.map(({ node }) => {
+              {this.state.pastItems.map(({ node }) => {
                 return (
                   <div
                     key={node.id}
