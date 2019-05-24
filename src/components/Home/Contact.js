@@ -28,14 +28,6 @@ export default function Contact() {
                 placeholder="Your email"
                 className="form-control"
               />
-
-              {/* <input
-                type="text"
-                className="form-control"
-                name="email"
-                id="email"
-                placeholder="johnsmith@email.com"
-              /> */}
             </div>
             {/* message */}
             <div className="form-group">
