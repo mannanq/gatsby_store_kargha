@@ -47,7 +47,8 @@ h6 {
   transition: all 2000ms;
 }
 
-.default-background:hover {
+.default-background:hover,
+.about-background:hover {
   filter: blur(0px);
   -webkit-filter: blur(0px);
 }
